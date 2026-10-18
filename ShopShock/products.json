@@ -1,0 +1,189 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Earbuds Pro",
+      "category": "Electronics",
+      "price": 2499,
+      "stock": 34,
+      "supplier": "SoundWave Traders"
+    },
+    {
+      "id": 2,
+      "name": "Bluetooth Speaker Mini",
+      "category": "Electronics",
+      "price": 1799,
+      "stock": 8,
+      "supplier": "SoundWave Traders"
+    },
+    {
+      "id": 3,
+      "name": "Smart LED Bulb (Pack of 2)",
+      "category": "Home",
+      "price": 599,
+      "stock": 62
+    },
+    {
+      "id": 4,
+      "name": "Cotton Bedsheet Set",
+      "category": "Home",
+      "price": 1299,
+      "stock": "48",
+      "supplier": "Jaipur Textiles"
+    },
+    {
+      "id": 5,
+      "name": "Ergonomic Office Chair",
+      "category": "Home Office",
+      "price": 7499,
+      "stock": 5,
+      "supplier": "SitWell Furniture"
+    },
+    {
+      "id": 6,
+      "name": "Adjustable Laptop Stand",
+      "category": "Home Office",
+      "price": 999,
+      "stock": 27
+    },
+    {
+      "id": 7,
+      "name": "Desk Organizer",
+      "category": "Home Office",
+      "price": 150,
+      "stock": 40,
+      "supplier": "Deskify"
+    },
+    {
+      "id": 8,
+      "name": "Yoga Mat (6 mm)",
+      "category": "Fitness",
+      "price": 799,
+      "stock": 0
+    },
+    {
+      "id": 9,
+      "name": "Resistance Band Set",
+      "category": "Fitness",
+      "price": 499,
+      "stock": 15,
+      "supplier": "FlexFit India"
+    },
+    {
+      "id": 10,
+      "name": "Spiral Notebook (A5)",
+      "category": "Stationery",
+      "price": 100,
+      "stock": 120
+    },
+    {
+      "id": 11,
+      "name": "Gel Pen (Blue)",
+      "category": "Stationery",
+      "price": 20,
+      "stock": 300,
+      "supplier": "Inkwell Traders"
+    },
+    {
+      "id": 12,
+      "name": "Eraser",
+      "category": "Stationery",
+      "price": 9,
+      "stock": 9
+    },
+    {
+      "id": 13,
+      "name": "Premium Fountain Pen",
+      "category": "Stationery",
+      "price": 1499,
+      "stock": 22,
+      "supplier": "Inkwell Traders"
+    }
+  ],
+  "orders": [
+    {
+      "orderId": "ORD-1001",
+      "productId": 1,
+      "quantity": 1,
+      "status": "Delivered"
+    },
+    {
+      "orderId": "ORD-1002",
+      "productId": 3,
+      "quantity": 2,
+      "status": "Delivered"
+    },
+    {
+      "orderId": "ORD-1003",
+      "productId": 10,
+      "quantity": 5,
+      "status": "Delivered"
+    },
+    {
+      "orderId": "ORD-1004",
+      "productId": 5,
+      "quantity": 1,
+      "status": "Cancelled"
+    },
+    {
+      "orderId": "ORD-1005",
+      "productId": 2,
+      "quantity": 1,
+      "status": "Delivered"
+    },
+    {
+      "orderId": "ORD-1006",
+      "productId": 11,
+      "quantity": 10,
+      "status": "Delivered"
+    },
+    {
+      "orderId": "ORD-1007",
+      "productId": 8,
+      "quantity": 2,
+      "status": "Delivered"
+    },
+    {
+      "orderId": "ORD-1008",
+      "productId": 4,
+      "quantity": 1,
+      "status": "Processing"
+    },
+    {
+      "orderId": "ORD-1009",
+      "productId": 6,
+      "quantity": 2,
+      "status": "Delivered"
+    },
+    {
+      "orderId": "ORD-1010",
+      "productId": 9,
+      "quantity": 3,
+      "status": "Cancelled"
+    },
+    {
+      "orderId": "ORD-1011",
+      "productId": 1,
+      "quantity": 2,
+      "status": "Delivered"
+    },
+    {
+      "orderId": "ORD-1012",
+      "productId": 12,
+      "quantity": 4,
+      "status": "Delivered"
+    },
+    {
+      "orderId": "ORD-1013",
+      "productId": 7,
+      "quantity": 1,
+      "status": "Delivered"
+    },
+    {
+      "orderId": "ORD-1014",
+      "productId": 13,
+      "quantity": 1,
+      "status": "Delivered"
+    }
+  ]
+}

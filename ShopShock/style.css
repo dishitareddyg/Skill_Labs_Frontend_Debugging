@@ -1,0 +1,78 @@
+/* ShopShock styles */
+:root {
+  --indigo: #2B1E5C;
+  --indigo-soft: #43338A;
+  --shock: #FFD23F;
+  --bg: #F3F2F8;
+  --surface: #FFFFFF;
+  --line: #DDDAEC;
+  --text: #1E1B33;
+  --muted: #55526E;
+  --bar: #5B3FD1;
+  --track: #E7E3F7;
+  --green-bg: #DFF3E7; --green-text: #17603A;
+  --amber-bg: #FFF0CC; --amber-text: #7A4B00;
+  --red-bg: #FBE3E0;   --red-text: #8E1D14;
+  --radius: 10px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+h1, h2, p, ul { margin: 0; }
+
+.site-header { background: var(--indigo); color: #fff; padding: 1rem 1.5rem; border-bottom: 4px solid var(--shock); }
+.brand { display: flex; align-items: center; gap: 0.75rem; max-width: 1100px; margin: 0 auto; }
+.brand-mark { width: 40px; height: 40px; flex: none; }
+.brand-name { font-size: 1.6rem; line-height: 1.1; }
+.brand-sub { color: #CFC8EE; font-size: 0.95rem; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 1.5rem; display: grid; gap: 1.5rem; }
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+.metric { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--indigo-soft); border-radius: var(--radius); padding: 1rem; }
+.metric-revenue { border-top-color: var(--shock); }
+.metric-warn { border-top-color: #E08A00; }
+.metric-label { font-size: 0.95rem; font-weight: 600; color: var(--muted); }
+.metric-value { font-size: 1.9rem; font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; }
+.metric-note { font-size: 0.85rem; color: var(--muted); }
+
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; }
+.panel > h2 { font-size: 1.15rem; margin-bottom: 1rem; }
+
+.bars { list-style: none; padding: 0; display: grid; gap: 0.75rem; }
+.bar-row { display: grid; grid-template-columns: 130px 1fr 90px; gap: 0.75rem; align-items: center; }
+.bar-label { font-weight: 600; }
+.bar-track { background: var(--track); border-radius: 999px; height: 14px; overflow: hidden; }
+.bar-fill { background: var(--bar); height: 100%; border-radius: 999px; }
+.bar-value { text-align: right; font-variant-numeric: tabular-nums; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; }
+.field { display: flex; flex-direction: column; gap: 0.25rem; min-width: 160px; }
+.field-grow { flex: 1 1 220px; }
+label { font-size: 0.9rem; font-weight: 600; }
+input, select { font: inherit; padding: 0.55rem 0.7rem; border: 1px solid #8A86A6; border-radius: 8px; background: #fff; color: var(--text); }
+:focus-visible { outline: 3px solid #1D4ED8; outline-offset: 2px; }
+.result-count { margin: 1rem 0 0.5rem; color: var(--muted); font-size: 0.95rem; }
+
+.table-wrap { overflow-x: auto; }
+.product-table { width: 100%; border-collapse: collapse; }
+.product-table th, .product-table td { padding: 0.7rem 0.75rem; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.product-table th { font-size: 0.9rem; color: var(--muted); background: #FAF9FD; }
+.product-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.product-name { font-weight: 600; }
+.product-supplier { font-size: 0.85rem; color: var(--muted); }
+.badge { display: inline-block; margin-left: 0.5rem; padding: 0.1rem 0.55rem; border-radius: 999px; font-size: 0.8rem; font-weight: 700; }
+.badge-in { background: var(--green-bg); color: var(--green-text); }
+.badge-low { background: var(--amber-bg); color: var(--amber-text); }
+.badge-out { background: var(--red-bg); color: var(--red-text); }
+.empty-state { margin-top: 1rem; padding: 1.5rem; text-align: center; color: var(--muted); border: 2px dashed var(--line); border-radius: 8px; }
+
+@media (max-width: 700px) {
+  .container { padding: 1rem; }
+  .panel { padding: 1rem; }
+  .bar-row { grid-template-columns: 1fr 80px; }
+  .bar-track { grid-column: 1 / -1; order: 3; }
+  .product-table thead { position: absolute; left: -9999px; }
+  .product-table, .product-table tbody, .product-table tr, .product-table td { display: block; width: 100%; }
+  .product-table tr { border: 1px solid var(--line); border-radius: 8px; margin-bottom: 0.75rem; padding: 0.25rem 0; }
+  .product-table td { display: flex; justify-content: space-between; gap: 1rem; border-bottom: none; padding: 0.4rem 0.75rem; text-align: right; }
+  .product-table td::before { content: attr(data-label); font-weight: 600; color: var(--muted); text-align: left; }
+}

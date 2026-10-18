@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather or Not</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body aria-busy="false">
+  <a class="skip-link" href="#weather-panel">Skip to weather</a>
+
+  <header class="site-header">
+    <h1>Weather <span class="or-not">or Not</span></h1>
+    <p class="badge">Fictional sample data. Not real weather.</p>
+  </header>
+
+  <main class="layout">
+
+    <!-- City search and selection -->
+    <section class="card search-card" aria-labelledby="search-title">
+      <h2 id="search-title" class="section-title">Choose a city</h2>
+
+      <form id="search-form" class="search-form" autocomplete="off">
+        <label for="city-input" class="field-label">City name</label>
+        <div class="search-row">
+          <input id="city-input" name="city" type="text" list="city-options"
+                 placeholder="Type a city, e.g. Tokyo">
+          <datalist id="city-options"></datalist>
+          <button type="submit" class="btn btn-primary">Get weather</button>
+        </div>
+      </form>
+
+      <fieldset class="chip-group">
+        <legend class="field-label">Or pick a city</legend>
+        <div id="city-chips" class="chips"></div>
+      </fieldset>
+
+      <div class="test-control">
+        <input id="failure-toggle" type="checkbox">
+        <label for="failure-toggle">Simulate a failed request (for testing error handling)</label>
+      </div>
+    </section>
+
+    <!-- Status, loading and messages -->
+    <section class="messages" aria-label="Request status">
+      <p id="status-message" class="status" role="status" aria-live="polite"></p>
+
+      <div id="loading-indicator" class="loading" hidden>
+        <span class="spinner" aria-hidden="true"></span>
+        <span>Fetching weather&hellip;</span>
+      </div>
+
+      <div id="error-banner" class="message message-error" role="alert" hidden>
+        <p id="error-text"></p>
+        <button id="retry-button" type="button" class="btn btn-secondary">Retry</button>
+      </div>
+
+      <div id="unsupported-message" class="message message-info" hidden>
+        <p id="unsupported-text"></p>
+      </div>
+    </section>
+
+    <!-- Weather display -->
+    <section id="weather-panel" class="card weather-card" aria-labelledby="city-heading" hidden>
+      <div class="current">
+        <div class="current-main">
+          <h2 id="city-heading" class="city-heading"></h2>
+          <p class="condition-row">
+            <span id="condition-icon" class="condition-icon" aria-hidden="true"></span>
+            <span id="condition-label" class="condition-label"></span>
+          </p>
+        </div>
+        <p class="temperature" aria-label="Current temperature in degrees Celsius">
+          <span id="temperature-value">--</span><span class="temp-unit">C</span>
+        </p>
+      </div>
+
+      <dl class="metrics">
+        <div class="metric">
+          <dt>Feels like</dt>
+          <dd id="feels-like-value">--</dd>
+        </div>
+        <div class="metric">
+          <dt>Humidity</dt>
+          <dd id="humidity-value">--</dd>
+        </div>
+        <div class="metric">
+          <dt>Wind speed</dt>
+          <dd id="wind-value">--</dd>
+        </div>
+      </dl>
+
+      <h3 class="section-title">5-day forecast</h3>
+      <ul id="forecast-list" class="forecast" aria-label="Five day forecast"></ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Weather or Not is a debugging exercise. All data is made up and served by a simulated API.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

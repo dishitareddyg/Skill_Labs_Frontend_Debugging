@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShopShock – Store Administration Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect width="32" height="32" rx="8" fill="#FFD23F"></rect>
+        <path d="M18 4 8 18h6l-2 10 10-14h-6z" fill="#2B1E5C"></path>
+      </svg>
+      <div>
+        <h1 class="brand-name">ShopShock</h1>
+        <p class="brand-sub">Store administration dashboard</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="metrics" aria-label="Store summary">
+      <article class="metric metric-revenue">
+        <h2 class="metric-label">Revenue</h2>
+        <p class="metric-value" id="revenue-value">–</p>
+        <p class="metric-note">Delivered orders only</p>
+      </article>
+      <article class="metric">
+        <h2 class="metric-label">Orders</h2>
+        <p class="metric-value" id="orders-value">–</p>
+        <p class="metric-note">All order statuses</p>
+      </article>
+      <article class="metric">
+        <h2 class="metric-label">Products</h2>
+        <p class="metric-value" id="products-value">–</p>
+        <p class="metric-note">In the catalogue</p>
+      </article>
+      <article class="metric metric-warn">
+        <h2 class="metric-label">Low-stock items</h2>
+        <p class="metric-value" id="lowstock-value">–</p>
+        <p class="metric-note">10 units or fewer</p>
+      </article>
+      <article class="metric">
+        <h2 class="metric-label">Units in stock</h2>
+        <p class="metric-value" id="units-value">–</p>
+        <p class="metric-note">Across all products</p>
+      </article>
+    </section>
+
+    <section class="panel" aria-labelledby="overview-heading">
+      <h2 id="overview-heading">Sales overview: revenue by category</h2>
+      <ul class="bars" id="category-bars"></ul>
+    </section>
+
+    <section class="panel" aria-labelledby="products-heading">
+      <h2 id="products-heading">Products</h2>
+      <div class="controls">
+        <div class="field field-grow">
+          <label for="search-input">Search by product name</label>
+          <input type="search" id="search-input" placeholder="e.g. speaker" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="category-select">Category</label>
+          <select id="category-select">
+            <option value="all">All categories</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sort-select">Sort by price</label>
+          <select id="sort-select">
+            <option value="default">Default order</option>
+            <option value="asc">Price: low to high</option>
+            <option value="desc">Price: high to low</option>
+          </select>
+        </div>
+      </div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div class="table-wrap">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th scope="col">Product</th>
+              <th scope="col">Category</th>
+              <th scope="col" class="num">Price</th>
+              <th scope="col" class="num">Stock</th>
+              <th scope="col" class="num">Units sold</th>
+            </tr>
+          </thead>
+          <tbody id="product-table-body"></tbody>
+        </table>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>No products match your search and filters. Clear the search box or choose another category.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

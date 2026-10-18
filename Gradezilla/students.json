@@ -1,0 +1,42 @@
+[
+  {
+    "id": "GZ-2026-0417",
+    "name": "Ishaan Verma",
+    "programme": "B.Tech Computer Science",
+    "semester": 3,
+    "subjects": [
+      { "name": "Data Structures", "marks": 90, "maxMarks": 100 },
+      { "name": "Database Systems", "marks": 76, "maxMarks": 100 },
+      { "name": "Operating Systems", "marks": 82, "maxMarks": 100 },
+      { "name": "Discrete Mathematics", "marks": 68, "maxMarks": 100 },
+      { "name": "Programming Lab", "marks": 40, "maxMarks": 50 }
+    ],
+    "attendance": { "classesAttended": 42, "totalClasses": 50 },
+    "assignments": { "completed": 7, "total": 10 }
+  },
+  {
+    "id": "GZ-2026-0533",
+    "name": "Diya Rao",
+    "programme": "B.Com Honours",
+    "semester": 2,
+    "subjects": [
+      { "name": "Financial Accounting", "marks": 100, "maxMarks": 100 },
+      { "name": "Business Statistics", "marks": 49.9, "maxMarks": 100 },
+      { "name": "Microeconomics", "marks": 50, "maxMarks": 100 },
+      { "name": "Business Law", "marks": 70, "maxMarks": 100 },
+      { "name": "Marketing Basics", "marks": 89.9, "maxMarks": 100 },
+      { "name": "Communication Skills", "marks": 0, "maxMarks": 100 }
+    ],
+    "attendance": { "classesAttended": 30, "totalClasses": 40 },
+    "assignments": { "completed": 10, "total": 12 }
+  },
+  {
+    "id": "GZ-2026-0610",
+    "name": "Neel Bhatt",
+    "programme": "B.Des Communication Design",
+    "semester": 1,
+    "subjects": [],
+    "attendance": { "classesAttended": 0, "totalClasses": 0 },
+    "assignments": { "completed": 0, "total": 0 }
+  }
+]

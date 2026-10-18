@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gradezilla – Student Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to dashboard</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">G</span>
+      <div>
+        <p class="brand-name">Gradezilla</p>
+        <p class="brand-sub">Northfield University · Student Portal</p>
+      </div>
+    </div>
+    <div class="student-switcher">
+      <label for="student-select">Viewing student</label>
+      <select id="student-select"></select>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Student profile -->
+    <section class="profile" aria-labelledby="student-name">
+      <div class="avatar" id="student-avatar" aria-hidden="true"></div>
+      <div class="profile-text">
+        <h1 id="student-name"></h1>
+        <p class="profile-meta">
+          <span>Student ID: <strong id="student-id"></strong></span>
+          <span id="student-programme"></span>
+          <span id="student-semester"></span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Summary cards -->
+    <section class="summary" aria-label="Summary">
+      <article class="card">
+        <h2 class="card-title">Average marks</h2>
+        <p class="card-value" id="average-value">–</p>
+        <p class="card-note" id="average-note"></p>
+      </article>
+      <article class="card">
+        <h2 class="card-title">Attendance</h2>
+        <p class="card-value" id="attendance-value">–</p>
+        <p class="card-note" id="attendance-note"></p>
+      </article>
+      <article class="card">
+        <h2 class="card-title">Assignments completed</h2>
+        <p class="card-value" id="assignments-value">–</p>
+        <p class="card-note" id="assignments-note"></p>
+      </article>
+      <article class="card">
+        <h2 class="card-title">Overall grade</h2>
+        <p class="card-value"><span class="grade-badge grade-none" id="overall-grade-badge">N/A</span></p>
+        <p class="card-note" id="overall-grade-note"></p>
+      </article>
+    </section>
+
+    <!-- Subject table -->
+    <section class="panel" aria-labelledby="subjects-heading">
+      <h2 id="subjects-heading">Subject-wise marks</h2>
+
+      <p class="empty-message" id="empty-message" hidden>
+        No subject marks have been recorded yet. Use the “Add or update marks” form below to add the first subject.
+      </p>
+
+      <div class="table-wrap" id="table-wrap">
+        <table>
+          <caption class="visually-hidden">Marks, percentage, grade and performance for each subject</caption>
+          <thead>
+            <tr>
+              <th scope="col">Subject</th>
+              <th scope="col">Marks</th>
+              <th scope="col">Percentage</th>
+              <th scope="col">Grade</th>
+              <th scope="col">Performance</th>
+            </tr>
+          </thead>
+          <tbody id="subject-rows"></tbody>
+        </table>
+      </div>
+
+      <div class="panel-actions">
+        <button type="button" class="btn btn-secondary" id="clear-subjects">Clear all subjects</button>
+        <button type="button" class="btn btn-secondary" id="reset-data">Reset sample data</button>
+      </div>
+      <p class="form-message" id="table-message" role="status" aria-live="polite"></p>
+    </section>
+
+    <div class="two-column">
+      <!-- Marks form -->
+      <section class="panel" aria-labelledby="marks-heading">
+        <h2 id="marks-heading">Add or update marks</h2>
+        <p class="panel-hint">Use an existing subject name to update it, or a new name to add a subject.</p>
+        <form id="marks-form" novalidate>
+          <div class="field">
+            <label for="subject-name">Subject name</label>
+            <input type="text" id="subject-name" name="subject-name" list="subject-name-list" autocomplete="off" aria-describedby="marks-message">
+            <datalist id="subject-name-list"></datalist>
+          </div>
+          <div class="field">
+            <label for="subject-marks">Marks obtained</label>
+            <input type="number" id="subject-marks" name="subject-marks" step="0.1" inputmode="decimal" aria-describedby="marks-help marks-message">
+            <p class="field-help" id="marks-help">0 up to the subject’s maximum marks (100 for new subjects).</p>
+          </div>
+          <button type="submit" class="btn btn-primary">Save marks</button>
+          <p class="form-message" id="marks-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <!-- Grade key -->
+      <section class="panel" aria-labelledby="key-heading">
+        <h2 id="key-heading">Grade bands</h2>
+        <ul class="grade-key">
+          <li><span class="grade-badge grade-a">A</span> 90 – 100% <em>Excellent</em></li>
+          <li><span class="grade-badge grade-b">B</span> 80 – 89.99% <em>Very Good</em></li>
+          <li><span class="grade-badge grade-c">C</span> 70 – 79.99% <em>Good</em></li>
+          <li><span class="grade-badge grade-d">D</span> 60 – 69.99% <em>Satisfactory</em></li>
+          <li><span class="grade-badge grade-e">E</span> 50 – 59.99% <em>Pass</em></li>
+          <li><span class="grade-badge grade-f">F</span> Below 50% <em>Fail</em></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="two-column">
+      <!-- Attendance -->
+      <section class="panel" aria-labelledby="attendance-heading">
+        <h2 id="attendance-heading">Attendance indicator</h2>
+        <div class="bar bar-large" id="attendance-bar" role="progressbar" aria-label="Attendance percentage" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="bar-fill" id="attendance-fill"></div>
+          <span class="bar-marker" style="left: 75%;" title="75% minimum"></span>
+        </div>
+        <p class="indicator-status" id="attendance-status"></p>
+        <p class="panel-hint">The marker on the bar shows the 75% minimum requirement.</p>
+
+        <form id="attendance-form" novalidate>
+          <div class="field">
+            <label for="classes-attended">Classes attended</label>
+            <input type="number" id="classes-attended" step="1" inputmode="numeric" aria-describedby="attendance-message">
+          </div>
+          <div class="field">
+            <label for="total-classes">Total classes held</label>
+            <input type="number" id="total-classes" step="1" inputmode="numeric" aria-describedby="attendance-message">
+          </div>
+          <button type="submit" class="btn btn-primary">Update attendance</button>
+          <p class="form-message" id="attendance-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <!-- Assignments -->
+      <section class="panel" aria-labelledby="assignments-heading">
+        <h2 id="assignments-heading">Assignment completion</h2>
+        <div class="bar bar-large" id="assignments-bar" role="progressbar" aria-label="Assignment completion percentage" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="bar-fill fill-info" id="assignments-fill"></div>
+        </div>
+        <p class="indicator-status" id="assignments-status"></p>
+
+        <form id="assignments-form" novalidate>
+          <div class="field">
+            <label for="assignments-completed">Assignments completed</label>
+            <input type="number" id="assignments-completed" step="1" inputmode="numeric" aria-describedby="assignments-message">
+          </div>
+          <div class="field">
+            <label for="assignments-total">Total assignments set</label>
+            <input type="number" id="assignments-total" step="1" inputmode="numeric" aria-describedby="assignments-message">
+          </div>
+          <button type="submit" class="btn btn-primary">Update assignments</button>
+          <p class="form-message" id="assignments-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Gradezilla · a practice project with fictional data. No real student information is used.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

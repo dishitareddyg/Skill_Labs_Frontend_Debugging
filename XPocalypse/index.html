@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XPocalypse - Level Up Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top bar: logo + player picker ===== -->
+  <header class="top-bar">
+    <h1 class="logo">XP<span>OCALYPSE</span></h1>
+    <div class="top-controls">
+      <label for="player-select">Playing as</label>
+      <select id="player-select"></select>
+      <button id="reset-button" type="button" class="btn btn-secondary">Reset demo</button>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <!-- ===== Player profile ===== -->
+    <section class="panel area-profile" aria-labelledby="profile-heading">
+      <h2 id="profile-heading" class="panel-title">Player Profile</h2>
+      <div class="profile-header">
+        <div class="avatar" id="profile-avatar"></div>
+        <div class="profile-names">
+          <p class="profile-name" id="profile-name"></p>
+          <p class="profile-rank" id="profile-rank"></p>
+        </div>
+        <div class="level-badge">LVL <span id="profile-level"></span></div>
+      </div>
+
+      <div class="xp-row">
+        <span id="profile-xp"></span>
+        <span id="profile-xp-next" class="muted"></span>
+      </div>
+      <div class="progress" id="xp-progress" role="progressbar"
+           aria-label="XP progress to next level"
+           aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-fill" id="xp-progress-fill"></div>
+      </div>
+
+      <p id="level-up-banner" class="level-up-banner hidden"></p>
+      <p id="last-action" class="last-action muted"></p>
+    </section>
+
+    <!-- ===== Leaderboard ===== -->
+    <section class="panel area-leaderboard" aria-labelledby="leaderboard-heading">
+      <h2 id="leaderboard-heading" class="panel-title">Leaderboard</h2>
+      <div class="table-wrap">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th scope="col">Rank</th>
+              <th scope="col">Player</th>
+              <th scope="col">Level</th>
+              <th scope="col">XP</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== Summary statistics ===== -->
+    <section class="panel area-summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading" class="panel-title">Challenge Summary</h2>
+      <dl class="stats">
+        <div class="stat">
+          <dt>Your challenges done</dt>
+          <dd id="summary-completed"></dd>
+        </div>
+        <div class="stat">
+          <dt>Everyone's challenges done</dt>
+          <dd id="summary-all-completed"></dd>
+        </div>
+        <div class="stat">
+          <dt>XP earned this session</dt>
+          <dd id="summary-session-xp"></dd>
+        </div>
+        <div class="stat">
+          <dt>Your rank</dt>
+          <dd id="summary-rank"></dd>
+        </div>
+      </dl>
+      <div class="progress progress-thin" aria-hidden="true">
+        <div class="progress-fill progress-fill-green" id="summary-fill"></div>
+      </div>
+    </section>
+
+    <!-- ===== Daily challenges ===== -->
+    <section class="panel area-challenges" aria-labelledby="challenges-heading">
+      <h2 id="challenges-heading" class="panel-title">Daily Challenges</h2>
+      <ul class="challenge-list" id="challenge-list"></ul>
+    </section>
+
+    <!-- ===== Rewards ===== -->
+    <section class="panel area-rewards" aria-labelledby="rewards-heading">
+      <h2 id="rewards-heading" class="panel-title">Rewards</h2>
+      <ul class="reward-list" id="reward-list"></ul>
+    </section>
+
+  </main>
+
+  <!-- Pop-up messages (level ups, rewards, XP gained) appear here -->
+  <div id="toast-area" class="toast-area" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

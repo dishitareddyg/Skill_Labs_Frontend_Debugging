@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskForge – Personal Task Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="8" fill="#E8890C"></rect>
+          <path d="M8 21h16v3H8zM11 14h12l-2 5H11z" fill="#16213A"></path>
+        </svg>
+        <h1 class="brand-name">TaskForge</h1>
+      </div>
+      <p class="tagline">Shape your day, one task at a time.</p>
+      <nav class="sidebar-help" aria-label="Quick guide">
+        <h2>Quick guide</h2>
+        <ul>
+          <li>Add a task with a priority.</li>
+          <li>Tick the box when it is done.</li>
+          <li>Search or filter to focus.</li>
+          <li>Delete tasks you no longer need.</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="summary" aria-label="Task summary">
+        <article class="card">
+          <h2 class="card-label">Total tasks</h2>
+          <p class="card-value" id="total-count">0</p>
+        </article>
+        <article class="card card-pending">
+          <h2 class="card-label">Pending</h2>
+          <p class="card-value" id="pending-count">0</p>
+        </article>
+        <article class="card card-done">
+          <h2 class="card-label">Completed</h2>
+          <p class="card-value" id="completed-count">0</p>
+        </article>
+      </section>
+
+      <section class="panel" aria-labelledby="add-heading">
+        <h2 id="add-heading">Add a task</h2>
+        <form id="task-form" class="task-form" novalidate>
+          <div class="field field-grow">
+            <label for="task-title">Task title</label>
+            <input type="text" id="task-title" name="title" maxlength="80" placeholder="e.g. Finish chemistry worksheet" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="task-priority">Priority</label>
+            <select id="task-priority" name="priority">
+              <option value="Low">Low</option>
+              <option value="Medium" selected>Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Add task</button>
+        </form>
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="panel" aria-labelledby="list-heading">
+        <h2 id="list-heading">Your tasks</h2>
+        <div class="toolbar">
+          <div class="field field-grow">
+            <label for="search-input">Search by title</label>
+            <input type="search" id="search-input" placeholder="Type to search" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="status-filter">Show</label>
+            <select id="status-filter">
+              <option value="all">All</option>
+              <option value="pending">Pending</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+        </div>
+        <ul id="task-list" class="task-list"></ul>
+        <p id="empty-state" class="empty-state" hidden></p>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+{
+  "dataLabel": "Fictional sample data for teaching purposes. Not real weather.",
+  "cities": [
+    {
+      "city": "London",
+      "country": "United Kingdom",
+      "condition": "Cloudy",
+      "temperatureC": 14,
+      "feelsLikeC": 12,
+      "humidityPercent": 78,
+      "windSpeedKmh": 19,
+      "windGustKmh": 34,
+      "forecast": [
+        { "day": "Mon", "condition": "Rain", "highC": 15, "lowC": 10, "rainChancePercent": 70 },
+        { "day": "Tue", "condition": "Cloudy", "highC": 14, "lowC": 9, "rainChancePercent": 40 },
+        { "day": "Wed", "condition": "Partly Cloudy", "highC": 16, "lowC": 10, "rainChancePercent": 20 },
+        { "day": "Thu", "condition": "Rain", "highC": 13, "lowC": 8, "rainChancePercent": 65 },
+        { "day": "Fri", "condition": "Sunny", "highC": 17, "lowC": 9, "rainChancePercent": 10 }
+      ]
+    },
+    {
+      "city": "Tokyo",
+      "country": "Japan",
+      "condition": "Partly Cloudy",
+      "temperatureC": 21,
+      "feelsLikeC": 21,
+      "humidityPercent": 62,
+      "windSpeedKmh": 11,
+      "windGustKmh": 22,
+      "forecast": [
+        { "day": "Mon", "condition": "Sunny", "highC": 23, "lowC": 16, "rainChancePercent": 10 },
+        { "day": "Tue", "condition": "Partly Cloudy", "highC": 22, "lowC": 15, "rainChancePercent": 20 },
+        { "day": "Wed", "condition": "Cloudy", "highC": 20, "lowC": 15, "rainChancePercent": 35 },
+        { "day": "Thu", "condition": "Rain", "highC": 18, "lowC": 14, "rainChancePercent": 75 },
+        { "day": "Fri", "condition": "Partly Cloudy", "highC": 21, "lowC": 14, "rainChancePercent": 25 }
+      ]
+    },
+    {
+      "city": "New York",
+      "country": "United States",
+      "condition": "Sunny",
+      "temperatureC": 17,
+      "feelsLikeC": 15,
+      "humidityPercent": 48,
+      "windSpeedKmh": 16,
+      "windGustKmh": 29,
+      "forecast": [
+        { "day": "Mon", "condition": "Sunny", "highC": 18, "lowC": 9, "rainChancePercent": 5 },
+        { "day": "Tue", "condition": "Partly Cloudy", "highC": 17, "lowC": 10, "rainChancePercent": 15 },
+        { "day": "Wed", "condition": "Cloudy", "highC": 15, "lowC": 9, "rainChancePercent": 40 },
+        { "day": "Thu", "condition": "Rain", "highC": 14, "lowC": 8, "rainChancePercent": 70 },
+        { "day": "Fri", "condition": "Sunny", "highC": 16, "lowC": 7, "rainChancePercent": 10 }
+      ]
+    },
+    {
+      "city": "Sydney",
+      "country": "Australia",
+      "condition": "Sunny",
+      "temperatureC": 24,
+      "feelsLikeC": 25,
+      "humidityPercent": 55,
+      "windSpeedKmh": 22,
+      "windGustKmh": 38,
+      "forecast": [
+        { "day": "Mon", "condition": "Sunny", "highC": 26, "lowC": 17, "rainChancePercent": 5 },
+        { "day": "Tue", "condition": "Sunny", "highC": 27, "lowC": 18, "rainChancePercent": 5 },
+        { "day": "Wed", "condition": "Partly Cloudy", "highC": 25, "lowC": 18, "rainChancePercent": 20 },
+        { "day": "Thu", "condition": "Thunderstorm", "highC": 22, "lowC": 17, "rainChancePercent": 80 },
+        { "day": "Fri", "condition": "Cloudy", "highC": 21, "lowC": 16, "rainChancePercent": 35 }
+      ]
+    },
+    {
+      "city": "Bengaluru",
+      "country": "India",
+      "condition": "Partly Cloudy",
+      "temperatureC": 27,
+      "feelsLikeC": 29,
+      "humidityPercent": 66,
+      "windSpeedKmh": 9,
+      "windGustKmh": 18,
+      "forecast": [
+        { "day": "Mon", "condition": "Rain", "highC": 26, "lowC": 20, "rainChancePercent": 60 },
+        { "day": "Tue", "condition": "Thunderstorm", "highC": 25, "lowC": 20, "rainChancePercent": 80 },
+        { "day": "Wed", "condition": "Cloudy", "highC": 26, "lowC": 20, "rainChancePercent": 45 },
+        { "day": "Thu", "condition": "Rain", "highC": 25, "lowC": 19, "rainChancePercent": 65 },
+        { "day": "Fri", "condition": "Partly Cloudy", "highC": 27, "lowC": 20, "rainChancePercent": 25 }
+      ]
+    },
+    {
+      "city": "Cairo",
+      "country": "Egypt",
+      "condition": "Sunny",
+      "temperatureC": 31,
+      "feelsLikeC": 30,
+      "humidityPercent": 28,
+      "windSpeedKmh": 14,
+      "windGustKmh": 26,
+      "forecast": [
+        { "day": "Mon", "condition": "Sunny", "highC": 32, "lowC": 20, "rainChancePercent": 0 },
+        { "day": "Tue", "condition": "Sunny", "highC": 33, "lowC": 21, "rainChancePercent": 0 },
+        { "day": "Wed", "condition": "Sunny", "highC": 33, "lowC": 21, "rainChancePercent": 0 },
+        { "day": "Thu", "condition": "Partly Cloudy", "highC": 31, "lowC": 20, "rainChancePercent": 5 },
+        { "day": "Fri", "condition": "Sunny", "highC": 30, "lowC": 19, "rainChancePercent": 0 }
+      ]
+    }
+  ]
+}

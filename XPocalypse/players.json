@@ -1,0 +1,26 @@
+{
+  "levelThresholds": [0, 100, 250, 500, 800, 1200],
+  "rewardMilestones": [
+    { "id": "r1", "xp": 100,  "name": "Rookie Spark" },
+    { "id": "r2", "xp": 250,  "name": "Challenger Badge" },
+    { "id": "r3", "xp": 500,  "name": "Veteran Crest" },
+    { "id": "r4", "xp": 800,  "name": "Elite Emblem" },
+    { "id": "r5", "xp": 1200, "name": "Legend Crown" }
+  ],
+  "challenges": [
+    { "id": "c1", "title": "Warm-Up Stretch",     "description": "Stretch for five minutes.",           "xp": 20 },
+    { "id": "c2", "title": "Read 10 Pages",       "description": "Read ten pages of any book.",         "xp": 30 },
+    { "id": "c3", "title": "Inbox Sprint",        "description": "Clear your inbox in 15 minutes.",     "xp": 40 },
+    { "id": "c4", "title": "Code Kata",           "description": "Solve one small coding exercise.",    "xp": 60 },
+    { "id": "c5", "title": "Deep Work Session",   "description": "Focus for 90 uninterrupted minutes.", "xp": 80 },
+    { "id": "c6", "title": "Boss Fight: Ship It", "description": "Finish and publish one project.",     "xp": 120 }
+  ],
+  "players": [
+    { "id": "p1", "name": "Nova",  "xp": 90,   "level": 1, "completedChallengeIds": [] },
+    { "id": "p2", "name": "Blaze", "xp": 1120, "level": 5, "completedChallengeIds": ["c1", "c2", "c3"] },
+    { "id": "p3", "name": "Vex",   "xp": 245,  "level": 2, "completedChallengeIds": ["c1"] },
+    { "id": "p4", "name": "Echo",  "xp": 60,   "level": 1, "completedChallengeIds": ["c2"] },
+    { "id": "p5", "name": "Rune",  "xp": 730,  "level": 4, "completedChallengeIds": ["c1", "c4"] },
+    { "id": "p6", "name": "Sable", "xp": 495,  "level": 3, "completedChallengeIds": ["c3"] }
+  ]
+}

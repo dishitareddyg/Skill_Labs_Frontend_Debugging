@@ -5,8 +5,6 @@
 | | |
 |---|---|
 | **Type** | Debugging with asynchronous JavaScript (front end only) |
-| **Time** | About 60 to 90 minutes |
-| **Difficulty** | Intermediate (2 of 3) |
 | **You need** | A browser (Chrome, Edge or Firefox recommended), a code editor such as VS Code, and optionally Git |
 | **Allowed** | Vanilla HTML, CSS and JavaScript only. No libraries, no frameworks, no CDNs, no real network requests |
 
@@ -22,7 +20,6 @@ All cities and numbers are **fictional sample data**. No account or API key is n
 | Follow async code | You can explain, in order, what `loadCity()` does before, during and after the `await`. |
 | Spot stale data | You can tell when something on screen belongs to an earlier request, and say why. |
 | Handle every state | You have checked loading, success, unsupported city, failure and empty input, and then checked them again after switching cities. |
-| Report like a developer | Each bug has steps, expected result, actual result, cause and fix. |
 
 ---
 
@@ -30,17 +27,9 @@ All cities and numbers are **fictional sample data**. No account or API key is n
 
 **Windows:** unzip the whole `WeatherOrNot` folder (do not run files from inside the ZIP), then double-click **`start.bat`**.
 
-**If that does not work:** open Command Prompt in the folder and run `start index.html`, or double-click `index.html`, or drag it onto a browser window. On macOS or Linux, open `index.html` in a browser.
+**If that does not work:** open Command Prompt in the folder and run `.\start.bat`, or double-click `index.html`, or drag it onto a browser window. On macOS or Linux, open `index.html` in a browser.
 
 **After editing:** save and refresh. Use `Ctrl + F5` if nothing changes.
-
-**Recommended before you touch any code:**
-
-```
-git init
-git add .
-git commit -m "Baseline: original Weather or Not"
-```
 
 ---
 
@@ -204,9 +193,6 @@ Select a city and read the messages in order. At each moment ask: **what is alre
 ### D. Check every state
 Test a supported city, an unsupported city, an empty search and a simulated failure. After each one, look at the spinner, the status line, both message boxes and the weather panel. Then switch to a different city and look again.
 
-### E. Fix and commit
-Change one thing, rerun section 7, then commit, for example `git commit -am "Fix wind speed showing gust value"`.
-
 ### DevTools cheat sheet
 
 Open with `F12` or `Ctrl + Shift + I`.
@@ -220,39 +206,3 @@ Open with `F12` or `Ctrl + Shift + I`.
 | See start-up messages | Open the Console, then reload with `Ctrl + R`. |
 
 ---
-
-## 9. Debugging log (copy one row per problem)
-
-| Field | Your notes |
-|---|---|
-| Bug title | |
-| Steps to reproduce (city order, checkbox state) | |
-| Expected (rule ID or table) | |
-| Actual | |
-| When it appears (during loading, after success, after failure) | |
-| Cause (file, function, line) | |
-| Fix (one sentence) | |
-| Tests re-run | |
-| Git commit message | |
-
----
-
-## 10. What to hand in
-
-- [ ] The fixed `script.js` (and any other file you changed).
-- [ ] A completed debugging log with one entry per defect, including defects that are **not** obvious from the known-issues table.
-- [ ] The section 7 checklist with both columns filled in.
-- [ ] Your Git history with one commit per fix.
-
----
-
-## 11. Troubleshooting
-
-| Problem | What to try |
-|---|---|
-| Nothing happens when I double-click `start.bat` | Extract the ZIP first, then try again, or use `start index.html`. |
-| The page is unstyled or nothing responds | `index.html`, `style.css` and `script.js` must be in the same folder with those exact names. |
-| My edit has no effect | Save, then press `Ctrl + F5`. |
-| The Console says `WEATHER_DATA is not defined` | Make sure you opened the Console on this page and that `script.js` loaded without an error. |
-| A request seems to hang | It should finish in about 1.2 seconds. If it does not, check the Console for a red error. |
-| I broke something | `git diff` shows your changes. `git checkout script.js` returns to the baseline. |

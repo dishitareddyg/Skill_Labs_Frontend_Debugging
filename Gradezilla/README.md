@@ -5,7 +5,6 @@ A student portal that shows subject marks, attendance, assignment progress and a
 | | |
 |---|---|
 | **Skills practised** | Checking calculations by hand, comparison operators, input validation, DOM rendering |
-| **Suggested time** | 60 to 90 minutes |
 | **Stack** | HTML, CSS and vanilla JavaScript. No libraries, server or network requests |
 | **Data** | Fictional students only |
 
@@ -27,7 +26,7 @@ You have joined the portal team at Northfield University. Students say their das
 2. Double-click **`start.bat`** (Windows). Your default browser opens `index.html`.
 3. After each edit, save the file and refresh the page (`Ctrl + F5` clears the cache).
 
-No `start.bat`? Open a Command Prompt in the folder and run `start index.html`, or open `index.html` in any browser.
+`start.bat`not working? Open a Command Prompt in the folder and run `.\start.bat`, or open `index.html` in any browser.
 
 ## How the dashboard should work
 

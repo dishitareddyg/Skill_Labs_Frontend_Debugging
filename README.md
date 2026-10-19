@@ -1,16 +1,18 @@
 # Skill Labs: Frontend Debugging
 
+**SO... WE'VE A SET OF 5 BUGGED MINI-PROJECTS, WHERE EACH PROJECT HAS 4 BUGS EACH (OUT OF WHICH 3 BUGS ARE MENTIONED IN THE DOCUMENTATION WHILE THE LAST ONE IS UNTRACKED)**
+
 A collection of small, self-contained front-end apps that are **deliberately buggy**. Each project is built with plain HTML, CSS and vanilla JavaScript (no libraries, no build step, no network requests). Your task is to reproduce the reported problems, work out the correct answer by hand, find the root cause and fix it.
 
 ## Projects
 
-| Project | What it is | Type of bugs to find | Difficulty / Time |
-|---|---|---|---|
-| [TaskForge](./TaskForge/) | Personal task dashboard (add, complete, delete, search, filter) | Event handling, state and summary calculations | Beginner (45–60 min) |
-| [ShopShock](./ShopShock/) | Store administration dashboard (products, orders, revenue) | Data types, the `+` operator, filtering, searching and sorting | 60–90 min |
-| [Gradezilla](./Gradezilla/) | Student performance dashboard (marks, grades, attendance) | Calculations, comparison operators, input validation | 60–90 min |
-| [WeatherOrNot](./WeatherOrNot/) | Weather dashboard with a simulated async API | Stale data, async ordering, wrong property mapping | Intermediate (60–90 min) |
-| [XPocalypse](./XPocalypse/) | Gamified productivity dashboard (XP, levels, leaderboard) | Sorting, derived values, statement order, thresholds | Intermediate (60–90 min) |
+| Project | What it is | Type of bugs to find |
+|---|---|---|
+| [TaskForge](./TaskForge/) | Personal task dashboard (add, complete, delete, search, filter) | Event handling, state and summary calculations |
+| [ShopShock](./ShopShock/) | Store administration dashboard (products, orders, revenue) | Data types, the `+` operator, filtering, searching and sorting |
+| [Gradezilla](./Gradezilla/) | Student performance dashboard (marks, grades, attendance) | Calculations, comparison operators, input validation |
+| [WeatherOrNot](./WeatherOrNot/) | Weather dashboard with a simulated async API | Stale data, async ordering, wrong property mapping |
+| [XPocalypse](./XPocalypse/) | Gamified productivity dashboard (XP, levels, leaderboard) | Sorting, derived values, statement order, thresholds |
 
 ## How each project is run
 
@@ -18,7 +20,7 @@ A collection of small, self-contained front-end apps that are **deliberately bug
 2. Double-click **`start.bat`** (Windows) to open `index.html` in your browser, or open `index.html` directly.
 3. After each edit, save the file and refresh with `Ctrl + F5` to bypass the cache.
 
-No `start.bat`? Run `start index.html` from a Command Prompt in that folder.
+`start.bat`not working? Run `.\start.bat` from a Command Prompt in that folder.
 
 ## Suggested workflow
 

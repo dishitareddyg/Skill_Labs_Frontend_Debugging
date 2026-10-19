@@ -5,14 +5,12 @@
 | | |
 |---|---|
 | **Type** | Debugging and bug-fixing (front end only) |
-| **Time** | About 45 to 60 minutes |
-| **Difficulty** | Beginner (1 of 3) |
 | **You need** | A browser (Chrome, Edge, Firefox or Safari), a code editor such as VS Code, and optionally Git |
 | **Allowed** | Vanilla HTML, CSS and JavaScript only. No libraries, no frameworks, no Node.js, no build step |
 
 ---
 
-## 1. What you will practise
+## 1. What you will practice
 
 By the end you should be able to do each of these on your own:
 
@@ -22,7 +20,6 @@ By the end you should be able to do each of these on your own:
 | Reproduce before fixing | For every bug you have written steps that trigger it every time. |
 | Trace data flow | You can follow one task from the form, into the array, onto the screen and into the summary cards. |
 | Inspect a running page | You have used the Console, Elements and Sources tabs to read real values instead of guessing. |
-| Work in small steps | One fix, one test round, one Git commit. |
 
 ---
 
@@ -30,17 +27,9 @@ By the end you should be able to do each of these on your own:
 
 **Windows:** extract the whole ZIP into a folder named `TaskForge`, then double-click **`start.bat`**. The app opens in your default browser.
 
-**If that does not work:** open Command Prompt in the folder and run `start index.html`, or double-click `index.html`, or drag it onto a browser window. On macOS or Linux, open `index.html` in a browser.
+**If that does not work:** open Command Prompt in the folder and run `.\start.bat`, or double-click `index.html`, or drag it onto a browser window. On macOS or Linux, open `index.html` in a browser.
 
 **After editing:** save the file and refresh the browser. Use `Ctrl + F5` to bypass the cache if nothing changes.
-
-**Recommended before you touch any code:**
-
-```
-git init
-git add .
-git commit -m "Baseline: original TaskForge"
-```
 
 ---
 
@@ -136,7 +125,6 @@ After each fix, run **all** the tests again, not only the one for the bug you ju
 4. **Inspect.** Print the real values instead of guessing (see the cheat sheet below).
 5. **Change one thing.** Make the smallest edit that could work.
 6. **Retest everything** in section 7.
-7. **Commit.** For example `git commit -am "Fix delete removing wrong task"`.
 
 ### DevTools cheat sheet
 
@@ -152,38 +140,3 @@ Open DevTools with `F12` or `Ctrl + Shift + I`.
 
 ---
 
-## 9. Debugging log (copy one row per problem)
-
-| Field | Your notes |
-|---|---|
-| Bug title | |
-| Steps to reproduce | |
-| Expected (rule ID) | |
-| Actual | |
-| Layer (data, rendering, events, calculation) | |
-| Cause (file, function, line) | |
-| Fix (one sentence) | |
-| Tests re-run | |
-| Git commit message | |
-
----
-
-## 10. What to hand in
-
-- [ ] The fixed `script.js` (and any other file you changed).
-- [ ] A completed debugging log with one entry per bug you found, including any that are **not** in the known-issues table.
-- [ ] The section 7 checklist with the "Before fix" and "After fix" columns filled in.
-- [ ] Your Git history showing one commit per fix.
-
----
-
-## 11. Troubleshooting
-
-| Problem | What to try |
-|---|---|
-| Nothing happens when I double-click `start.bat` | Extract the ZIP first. Do not run it from inside the archive. Then use `start index.html`. |
-| The page looks unstyled or buttons do nothing | `index.html`, `style.css` and `script.js` must sit in the same folder with those exact names. |
-| My edit has no effect | Save the file, then press `Ctrl + F5`. |
-| The Console shows a red error | Read the file name and line number at the right of the message and go there first. |
-| I broke something and cannot tell what | Run `git diff` to see exactly what you changed, or `git checkout script.js` to return to the baseline. |
-| Internet Explorer will not run it | It is not supported. Use a current browser. |

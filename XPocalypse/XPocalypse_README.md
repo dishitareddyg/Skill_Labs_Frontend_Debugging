@@ -5,8 +5,6 @@
 | | |
 |---|---|
 | **Type** | Debugging logic, sorting and derived values (front end only) |
-| **Time** | About 60 to 90 minutes |
-| **Difficulty** | Intermediate (2 of 3) |
 | **You need** | A browser, a code editor such as VS Code, and optionally Git |
 | **Allowed** | Vanilla HTML, CSS and JavaScript only. No libraries, no frameworks, no network access |
 
@@ -28,17 +26,9 @@
 
 **Windows:** double-click **`start.bat`**. It opens `index.html` in your default browser.
 
-**If that does not work:** open Command Prompt in the folder and run `start index.html`, or double-click `index.html`, or drag it onto a browser window. On macOS or Linux, open `index.html` in a browser.
+**If that does not work:** open Command Prompt in the folder and run `.\start.bat`, or double-click `index.html`, or drag it onto a browser window. On macOS or Linux, open `index.html` in a browser.
 
 **After editing:** save and refresh. Use `Ctrl + F5` if nothing changes. All changes live in memory: refreshing or pressing **Reset demo** restores the starting data.
-
-**Recommended before you touch any code:**
-
-```
-git init
-git add .
-git commit -m "Baseline: original XPocalypse"
-```
 
 ---
 
@@ -193,8 +183,7 @@ After each fix, rerun **everything**, not just the test for that bug.
 4. **Calculate by hand.** Work out the expected XP, level and rank on paper first, then compare with the app.
 5. **Isolate.** Find the smallest set of clicks that reproduces the problem.
 6. **Locate.** Use a breakpoint or `console.log` to find the first place the real value and the expected value differ.
-7. **Fix one problem at a time**, retest everything, and commit, for example `git commit -am "Fix leaderboard sort"`.
-8. **Use Reset demo** to return to clean data between tests.
+7. **Use Reset demo** to return to clean data between tests.
 
 ### DevTools cheat sheet
 
@@ -211,38 +200,3 @@ Open with `F12` or `Ctrl + Shift + I`.
 | Watch code run line by line | Sources tab, open `script.js`, click a line number inside `completeChallenge`, click **Complete** on the page, step with `F10`. |
 
 ---
-
-## 10. Debugging log (copy one row per problem)
-
-| Field | Your notes |
-|---|---|
-| Bug title | |
-| Player and clicks that trigger it | |
-| Expected (rule ID or example) | |
-| Actual | |
-| Cause (file, function, line) | |
-| Fix (one sentence) | |
-| Tests re-run | |
-| Git commit message | |
-
----
-
-## 11. What to hand in
-
-- [ ] The fixed `script.js` (and any other file you changed).
-- [ ] A completed debugging log with one entry per defect, including any that are **not** in the known-issues table.
-- [ ] The section 8 checklist with both columns filled in.
-- [ ] Your Git history with one commit per fix.
-
----
-
-## 12. Troubleshooting
-
-| Problem | What to try |
-|---|---|
-| Nothing happens when I double-click `start.bat` | Extract the ZIP first, then try again, or use `start index.html`. |
-| The page is unstyled or buttons do nothing | `index.html`, `style.css` and `script.js` must be in the same folder with those exact names. |
-| My edit has no effect | Save, then press `Ctrl + F5`. |
-| I edited `players.json` and nothing changed | That file is a reference copy only. Change values in `script.js`, or better, do not change the data at all. |
-| `players` is not defined in the Console | Click the page once, reopen the Console, and check for a red error from `script.js`. |
-| I broke something | `git diff` shows your changes. `git checkout script.js` returns to the baseline. |

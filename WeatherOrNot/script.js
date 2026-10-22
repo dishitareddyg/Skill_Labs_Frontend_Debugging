@@ -100,8 +100,18 @@ const CONDITION_ICONS = {
    - Resolves with null when the city is not in the dataset.
    - Rejects with an Error when a failure is simulated.
    -------------------------------------------------------------------------- */
+// Cities whose FIRST request fails on its own (a "flaky" upstream service),
+// so the failure state can be reached without ticking the checkbox.
+// A second attempt (e.g. Retry) succeeds.
+const FLAKY_CITIES = ["sydney"];
+const alreadyAttempted = new Set();
+
 function fetchWeather(cityName, options) {
-  const shouldFail = Boolean(options && options.simulateFailure);
+  const key = String(cityName).trim().toLowerCase();
+  const isFlakyFirstTry = FLAKY_CITIES.includes(key) && !alreadyAttempted.has(key);
+  alreadyAttempted.add(key);
+
+  const shouldFail = Boolean(options && options.simulateFailure) || isFlakyFirstTry;
 
   return new Promise(function (resolve, reject) {
     setTimeout(function () {

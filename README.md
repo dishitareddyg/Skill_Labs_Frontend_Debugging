@@ -52,11 +52,11 @@ Open DevTools with **F12** (or **Ctrl + Shift + I**).
 
 ```
 Skill_Labs_Frontend_Debugging/
-├── TaskForge/       Task dashboard       (TaskForge_README.md)
+├── TaskForge/       Task dashboard       (README.md)
 ├── ShopShock/       Store dashboard      (README.md)
 ├── Gradezilla/      Grades dashboard     (README.md)
-├── WeatherOrNot/    Weather dashboard    (WeatherOrNot_README.md)
-├── XPocalypse/      XP dashboard         (XPocalypse_README.md)
+├── WeatherOrNot/    Weather dashboard    (README.md)
+├── XPocalypse/      XP dashboard         (README.md)
 └── README.md        This overview
 ```
 
